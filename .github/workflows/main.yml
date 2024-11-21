@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: 🎉 Deploy
+    name: 🎉 Building app
     runs-on: ubuntu-latest
 
     steps:
@@ -21,7 +21,7 @@ jobs:
           npm run build
 
   deploy:
-    name: deploy to server
+    name: Deploying app to server
     needs: [build]
 
     runs-on: ubuntu-latest
