@@ -17,6 +17,6 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ftp://premium700.web-hosting.com
+          server: premium700.web-hosting.com
           username: ${{ secrets.REACT_FTP_USERNAME }}
           password: ${{ secrets.REACT_FTP_PASSWORD }}
