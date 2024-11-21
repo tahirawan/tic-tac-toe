@@ -1,0 +1,55 @@
+
+name: Build and deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      
+
+
+#name: Deploy Staging Metis Frontend/Backend
+#
+#on:
+#  workflow_dispatch:
+#    inputs:
+#      frontend:
+#        description: 'Branch to deploy frontend'
+#        required: true
+#        default: 'main'
+#      backend:
+#        description: 'Branch to deploy backend'
+#        required: true
+#        default: 'main'
+#      doyouwanttodeployfresh:
+#        type: choice
+#        description: 'Do you want to deploy fresh (Drop Database)?'
+#        required: true
+#        default: 'no'
+#        options: ['yes', 'no']
+#
+#jobs:
+#  deploy_staging:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout repository
+#        uses: actions/checkout@v2
+#
+#      - name: Setup SSH Key
+#        run: |
+#          echo "${{ secrets.DEPLOY_METIS_SERVER_KEY }}"
+#      - name: create a file of the private key ansible_ssh_private_key_file
+#        run: |
+#          mkdir -p ~/.ssh
+#          echo "${{ secrets.DEPLOY_METIS_SERVER_KEY }}" > ~/.ssh/id_rsa
+#          chmod 600 ~/.ssh/id_rsa
+
